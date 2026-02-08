@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clube de Sócios</title>
+</head>
+<body>
+    <h1>Lista de Sócios</h1>
+    <a href="/cadastro">➕ Cadastrar Novo Sócio</a>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Plano</th>
+            <th>Ação</th>
+        </tr>
+        {% for socio in socios %}
+        <tr>
+            <td>{{ socio[0] }}</td>
+            <td>{{ socio[1] }}</td>
+            <td>{{ socio[2] }}</td>
+            <td>{{ socio[3] }}</td>
+            <td>
+                <a href="/deletar/{{ socio[0] }}">🗑️ Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

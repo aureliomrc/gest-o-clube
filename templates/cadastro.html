@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Novo Sócio</title>
+</head>
+<body>
+    <h1>Cadastrar Sócio</h1>
+    <form action="/criar" method="post">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br><br>
+        
+        <label>CPF:</label><br>
+        <input type="text" name="cpf" required><br><br>
+        
+        <label>Plano:</label><br>
+        <select name="plano">
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Bronze">Bronze</option>
+        </select><br><br>
+        
+        <button type="submit">Salvar</button>
+    </form>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
